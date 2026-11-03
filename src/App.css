@@ -1,0 +1,311 @@
+:root {
+  --pink-pastel: #ffd6e8;
+  --pink-deep: #ff5c93;
+  --pink-soft: #ff8fb8;
+  --cream: #fff9f2;
+  --baby-blue: #d8f1ff;
+  --soft-purple: #ece1ff;
+  --white: #ffffff;
+  --text-dark: #4a3540;
+  --text-muted: #7d6370;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+  width: 100%;
+  height: 100dvh;
+  overflow: hidden;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: var(--text-dark);
+  background-color: var(--cream);
+}
+
+.app-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100dvh;
+  max-width: 480px;
+  margin: 0 auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 40px rgba(255, 92, 147, 0.15);
+  transition: background 0.8s ease;
+}
+
+/* Background per Scene */
+.bg-scene-1 {
+  background: linear-gradient(160deg, var(--pink-pastel) 0%, var(--cream) 100%);
+}
+.bg-scene-2 {
+  background: linear-gradient(160deg, var(--pink-pastel) 0%, var(--soft-purple) 50%, var(--baby-blue) 100%);
+}
+.bg-scene-3 {
+  background: radial-gradient(circle at center, var(--cream) 0%, var(--pink-pastel) 100%);
+}
+.bg-scene-4 {
+  background: linear-gradient(180deg, var(--baby-blue) 0%, var(--pink-pastel) 100%);
+}
+.bg-scene-5 {
+  background: linear-gradient(135deg, #ffc4dd 0%, var(--soft-purple) 50%, var(--cream) 100%);
+}
+
+/* Header & Music Button */
+.top-bar {
+  position: absolute;
+  top: 16px;
+  left: 0;
+  right: 0;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 50;
+}
+
+.top-badge {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--pink-deep);
+  box-shadow: 0 4px 12px rgba(255, 92, 147, 0.12);
+}
+
+.music-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--pink-deep);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(255, 92, 147, 0.2);
+}
+
+/* Floating Particles */
+.particles-container {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.floating-item {
+  position: absolute;
+  user-select: none;
+  opacity: 0.65;
+}
+
+/* Container Scene */
+.scene-container {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  padding: 72px 24px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Typography */
+.title-playful {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 2.3rem;
+  line-height: 1.15;
+  color: var(--pink-deep);
+  text-shadow: 0 3px 0px #ffffff, 0 6px 15px rgba(255, 92, 147, 0.2);
+  margin-bottom: 12px;
+}
+
+.subtitle {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin-bottom: 28px;
+}
+
+.handwritten {
+  font-family: 'Caveat', cursive;
+  font-size: 1.75rem;
+  color: var(--pink-deep);
+}
+
+/* Button Interactive */
+.btn-primary {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  padding: 15px 28px;
+  border-radius: 999px;
+  border: 3px solid var(--white);
+  background: linear-gradient(135deg, var(--pink-deep) 0%, #ff7da8 100%);
+  color: var(--white);
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(255, 92, 147, 0.35);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Birthday Cake CSS */
+.cake-wrapper {
+  position: relative;
+  margin: 24px 0 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.candle {
+  width: 16px;
+  height: 48px;
+  background: repeating-linear-gradient(
+    45deg,
+    #ffffff,
+    #ffffff 6px,
+    #ff7da8 6px,
+    #ff7da8 12px
+  );
+  border-radius: 4px 4px 0 0;
+  position: relative;
+  z-index: 3;
+}
+
+.flame {
+  width: 20px;
+  height: 30px;
+  background: radial-gradient(ellipse at bottom, #fff78a 0%, #ff9d00 60%, #ff4500 100%);
+  border-radius: 50% 50% 35% 35%;
+  position: absolute;
+  top: -32px;
+  left: -2px;
+  box-shadow: 0 0 20px 6px rgba(255, 180, 0, 0.65);
+}
+
+.smoke {
+  position: absolute;
+  top: -28px;
+  font-size: 1.4rem;
+}
+
+.cake-top {
+  width: 150px;
+  height: 55px;
+  background: #ff9ebb;
+  border-radius: 14px 14px 0 0;
+  position: relative;
+  border: 3px solid #fff;
+  box-shadow: inset 0 10px 0 #ffd6e8;
+}
+
+.cake-bottom {
+  width: 190px;
+  height: 65px;
+  background: #ff759f;
+  border-radius: 14px 14px 8px 8px;
+  border: 3px solid #fff;
+  margin-top: -3px;
+  box-shadow: inset 0 12px 0 #ffc2d6, 0 12px 24px rgba(255, 92, 147, 0.2);
+}
+
+/* Polaroid Photo Card */
+.polaroid-card {
+  background: var(--white);
+  padding: 14px 14px 22px;
+  border-radius: 22px;
+  box-shadow: 0 18px 40px rgba(74, 53, 64, 0.16);
+  width: 100%;
+  max-width: 310px;
+  margin-bottom: 24px;
+  border: 3px solid #fff5f8;
+}
+
+.photo-frame {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--pink-pastel);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Menampilkan foto asli dengan rotasi proporsional karena file asli miring 90 derajat */
+.nadia-photo {
+  width: 135%;
+  height: 135%;
+  object-fit: cover;
+  transform: rotate(90deg);
+}
+
+.polaroid-caption {
+  margin-top: 14px;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 1.2rem;
+  color: var(--text-dark);
+}
+
+/* Scene 4 Wishes Card */
+.wishes-card {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  padding: 26px 22px;
+  border-radius: 24px;
+  box-shadow: 0 16px 35px rgba(255, 92, 147, 0.15);
+  border: 2px solid var(--white);
+  text-align: left;
+  margin-bottom: 22px;
+  max-height: 62dvh;
+  overflow-y: auto;
+}
+
+.wishes-paragraph {
+  font-size: 0.96rem;
+  line-height: 1.65;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+}
+
+/* Scene 5 Centerpiece */
+.centerpiece-frame {
+  width: 210px;
+  height: 260px;
+  border-radius: 28px;
+  padding: 8px;
+  background: var(--white);
+  box-shadow: 0 16px 35px rgba(255, 92, 147, 0.25);
+  margin: 14px 0 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.centerpiece-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
