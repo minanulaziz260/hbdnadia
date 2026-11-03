@@ -251,13 +251,14 @@ html, body {
   justify-content: center;
 }
 
-/* Menampilkan foto asli dengan rotasi proporsional karena file asli miring 90 derajat */
+/* Hapus transform rotate agar foto tampil tegak normal */
 .nadia-photo {
-  width: 135%;
-  height: 135%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  transform: rotate(90deg);
+  object-position: center;
 }
+
 
 .polaroid-caption {
   margin-top: 14px;
