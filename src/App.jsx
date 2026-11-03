@@ -10,19 +10,19 @@ const NADIA_PHOTOS = [
   {
     id: 1,
     src: '/images/nadia1.jpg',
-    caption: 'Cieee yang ulang tahun! 🥳',
+    caption: 'Uhuyyy yang ulang tahun! 🥳',
     rotate: -3,
   },
   {
     id: 2,
     src: '/images/nadia2.jpg',
-    caption: 'Tetap cantik, jangan galak-galak! 😜✌️',
+    caption: 'Tetap rendah hati, jangan patah semangat 🙌',
     rotate: 3,
   },
   {
     id: 3,
     src: '/images/nadia1.jpg', // Ganti ke '/images/nadia3.jpg' jika ada file ke-3
-    caption: 'Senyumnya jangan pelit dong! 😊✨',
+    caption: 'Panjang umur sehat selalu ya 🔥',
     rotate: -2.5,
   },
   {
@@ -161,7 +161,7 @@ const Scene02Cake = ({ onNext }) => {
       <p className="subtitle">
         {candleLit
           ? 'Make a wish dulu, terus tiup lilinnya ya!'
-          : 'Yeeay! Semoga doamu terkabul! 🎉'}
+          : 'Mantap! Semoga doamu terkabul! 🎉'}
       </p>
 
       {/* Kue Ulang Tahun muncul dari bawah */}
